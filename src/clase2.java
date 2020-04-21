@@ -3,23 +3,22 @@ public class clase2 {
 
 	public static void main (String[]args) {
 		
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Tamaño array");
-		int a = sc.nextInt();
-		int [] num = new int [a];
-		Media(num, a, sc);
+		int [] num = new int [9];
+		System.out.println(Media(num));
 		
 	}
 	
-	public static void Media (int [] num, int a, Scanner sc) {
+	public static int Media (int [] num) {
 		int media=0;
 		int b=0;
+		Scanner sc = new Scanner(System.in);
 		for(int i = 0; i<num.length; i++) {
-			 System.out.println("Introduce los números");
+			 System.out.println("Introduce los nÃºmeros");
 			 num[i]=sc.nextInt();
 			 b=b+num[i];
 		 }
 		media=b/num.length;
-		 System.out.println(media);
+		return media;
+	
 	}
 }
